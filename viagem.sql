@@ -105,3 +105,7 @@ insert into pacote (nome_pacote, cod_destino, cod_viagem) values
 ('Ano Novo','1','3');
 
 select * from pacote;
+
+select viagem.id_viagem, passageiro.nome, viagem.data_viagem
+FROM viagem
+INNER JOIN passageiro ON viagem.cod_passageiro=passageiro.id_passageiro;
